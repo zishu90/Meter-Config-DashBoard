@@ -1,0 +1,63 @@
+<div *ngIf="editConfig">
+<h2 mat-dialog-title>
+    <h4>CHANGE CONFIGURATION SETTINGS</h4>
+    <p>Please select the object to change from Drop Down for the selected meters</p>
+</h2>
+
+
+<mat-dialog-content [formGroup]="objectForm" *ngIf="formShowCond">
+    <div class="meterNumber-list">
+        <p (click)="deleteMeterNum(data)" *ngFor="let data of meterNumber">  {{data}}</p>
+    </div>
+    <div style="text-align: center;">
+            <div class="group-gap">
+                <label for="" class="objectLable">Please select the object to</label>
+                <select class="custom-select required-field"   formControlName="meterObject"  (change)="changeObject($event)" >
+                        <!-- <option value="" selected>Select Meter Object  <span style="color: green">*</span> </option> -->
+                        
+                        <!-- <option [selected]="true" [ngValue]="vendordata[0].VENDOR" >{{vendordata[0].VENDOR}}</option> -->
+                        <option *ngFor="let data of ObjectValue let i = index" [ngValue]="data.objectName">{{data.objectName}}</option>
+
+                    </select>
+                    <p>Range {{rangeLimit}}</p>
+            </div>
+            <div class="group-gap"> 
+                <label for="" class="newValue">Set new value</label>
+                <input type="text" (keypress)="keyPress($event)"
+                        placeholder="Enter new value" 
+                    formControlName="newValue">
+            </div>
+            <button class="mat-raised-button"  (click)="save()" [disabled] = "objectForm.invalid">   Submit</button>
+            <button class="mat-raised-button mat-primary" (click)="close()"> Cancel</button>
+        </div>
+</mat-dialog-content>
+
+<mat-dialog-content  *ngIf="!formShowCond" style="text-align: center;">
+
+    <h3>Configuration setting has been changed</h3>
+    <p>Do you want to change another configuration for the selected meters</p>
+    <button class="mat-raised-button" (click)="showForm()">Yes</button>
+     <button class="mat-raised-button mat-primary" (click)="close()"> No</button>
+
+</mat-dialog-content>
+
+
+
+<div class="settings-saved">
+    <div>Settings once you saved, can’t be revert</div>
+</div>
+
+</div>
+
+<div *ngIf="!editConfig">
+    <h2 mat-dialog-title>
+        <h4>ALERT</h4>
+    </h2>
+    <mat-dialog-content  style="text-align: center;">
+
+        <h3 style="font-weight: 100;">You can select only ten meters number</h3>
+         <button class="mat-raised-button mat-primary alert-button" (click)="close()"> Ok</button>
+    
+    </mat-dialog-content>
+
+</div>

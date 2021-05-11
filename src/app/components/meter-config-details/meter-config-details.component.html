@@ -1,0 +1,72 @@
+<div class="sub-header" style="width: 95.4%;">
+    <div class="back-button f-left" (click) = "back();"><img src="assets/icon/back.png" alt="Back" width="10 ">  <span>back</span></div>
+    <!-- <div class="f-left home"><img src="assets/icon/homewithbar.png" alt="Back" width="45"></div> -->
+    <h2 >meter configuration</h2>
+    <!-- <button type="checkbox" (click)="flag= !flag">{{flag=== true ? 'Show All' : 'Show only Editable'}}</button> -->
+    <button (click)="toggle()" id="bt">{{buttonName}}</button>
+    <!-- <select name="section" id="section">
+            <option value="">Jump to Section</option>
+            <option value="meter_information">Meter information</option>
+            <option value="meter_operation">Object regarding Meter operation</option>
+            <option value="event_log">Event log</option>
+            <option value="push_object">Push Object</option>
+            <option value="access_control">Access Control and Management Objects</option>
+            <option value="communications">Communications</option>
+    </select>
+    <h4>meter id: <span>SXE20202786705</span></h4> -->
+</div>
+
+
+<div class="main-content"> 
+    <div class="section"><p class="left-section">OBIS CODE</p><p class="right-section">RANGE</p></div>
+    <div class="mat-accrdion-main">
+        <mat-accordion [multi]="false"
+        #accordion="matAccordion">
+            <mat-expansion-panel [togglePosition]="'before'" [expanded]="step === 0" (opened)="setStep(0)" hideToggle> 
+              <mat-expansion-panel-header >
+                <mat-panel-title>
+                    Meter information
+                </mat-panel-title>
+               
+              </mat-expansion-panel-header>
+            <app-meter-infor [notifier]="childNotifier"></app-meter-infor>
+             
+            </mat-expansion-panel>
+            <mat-expansion-panel [togglePosition]="'before'" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+              <mat-expansion-panel-header >
+                <mat-panel-title>
+                    Object regarding Meter operation
+                </mat-panel-title>
+               
+              </mat-expansion-panel-header>
+              <app-meter-operation [notifier]="childNotifier"></app-meter-operation>
+            </mat-expansion-panel>
+            <mat-expansion-panel [togglePosition]="'before'" *ngIf="!show" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel-header >
+                  <mat-panel-title>
+                    Event log
+                  </mat-panel-title>    
+                </mat-expansion-panel-header> 
+                <app-event-log ></app-event-log>
+            </mat-expansion-panel>
+            <mat-expansion-panel [togglePosition]="'before'" *ngIf="!show" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel-header >
+                  <mat-panel-title>
+                    Push Object
+                  </mat-panel-title>    
+                </mat-expansion-panel-header> 
+                <app-push-object ></app-push-object>
+            </mat-expansion-panel>
+           
+
+            <mat-expansion-panel [togglePosition]="'before'" *ngIf="!show" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel-header >
+                  <mat-panel-title>
+                    Communications
+                  </mat-panel-title>    
+                </mat-expansion-panel-header> 
+                <app-communications ></app-communications>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

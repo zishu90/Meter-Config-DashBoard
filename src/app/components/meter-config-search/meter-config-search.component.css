@@ -1,0 +1,229 @@
+.sub-header h2{
+    text-transform: uppercase;
+    color: #0d0d8dc4;
+    /* width: 73%; */
+    font-size: 26px;
+    float: left;
+    margin: 20px 20px 0px 0px;
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+.mr-22{
+    margin-right: 22px;
+}
+.sub-header .para{
+    float: right;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+.main-content .para{
+    margin: -22px 10px 0px 22px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.search-box{
+    background-color: #fff;
+    padding: 1px 30px;
+    margin: 23px 0px;
+}
+button:disabled{
+    opacity: 0.2;
+}
+.search-manual p{
+    margin: 10px 0px;
+}
+select:disabled{
+    opacity: 0.9;
+ }
+
+.mat-form-field {
+    width: 15%;
+    height: 45px;
+    font-size: 18px;
+    border: 1px solid grey;
+    padding: 5px 0px 5px 6px;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline{
+    height: 0px !important;
+}
+  .asterisk_input::after {
+    content: " *";
+    color: #e32;
+    position: absolute;
+    left: 188px;
+    font-size: 23px;
+    padding: 6px 3px 0 0; }
+.search-box h2{
+    text-transform: uppercase;
+}
+.mb{
+    /* width: 25%; */
+    display: inline;
+    /* margin: 0% 1% 0% 0%; */
+}
+.mb select{
+    width: 15.6%;
+    height: 45px;
+    font-size: 18px;
+}
+
+.group-gap input{
+    width: 18.5%;
+    height: 41px;
+    font-size: 18px;
+}
+.group-gap button{
+    float: right;
+    padding: 7px 40px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    font-family: arial;
+}
+.invalid-feedback{
+    position: absolute;
+    top: 34px;
+    left: 4px;
+    color: red;
+}
+
+.searchResult{
+    border-bottom: thin solid #80808040;
+    padding: 10px 0px;
+    float: left;
+}
+.searchResult h2{
+    display: inline;
+    margin-right: 6px;
+    color:  #1C4692;
+}
+
+.searchResult span{
+    display: inline;
+    font-size: 20px;
+}
+
+.meter-list-main p{
+    color:  #1C4692;
+    float: right;
+    margin-right: 10px;
+}
+.header-cell{
+    width: 98.9%;
+    background-color: #1C4692;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 0px 20px 20px;
+    margin: 0px;
+}
+.mat-header-cell{
+    width: 100%;
+    background-color: #1C4692;
+    border-left: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+.mat-cell{
+    border-left: 1px solid #fff;
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.meter-list-main div ul li{
+    list-style: none;
+    display: initial;
+}
+
+.meter-list-main div ul {
+    margin: 0px;
+    padding: 0px;
+    width: 10%;
+    float: left;
+}
+.table-data-search{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+}
+.table-data-search table {
+    border-collapse: collapse;
+    /* width: 15%;
+    float: left; */
+  }
+.table-data-search table table thead{
+
+        display: inline-block;
+        background-color: #1C4692;
+        width: 16.5577%;
+        color: #fff;
+        padding: 15px 0px;
+        text-align: center;
+        border: 1px solid #fff;
+        font-size: 19px;
+        text-transform: uppercase;
+    
+  }
+  
+  /* tr {
+    border: 1px solid #0000003d;
+  } */
+
+  .table-data-search table tr input{
+    margin: 13px 15px 13px 42px;
+    width: 20px;
+    height: 20px;
+  }
+  .table-data-search tbody {
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.table-data-search table table tr .append-td {
+    /* padding: 10px 14px; */
+    font-size: 20px;
+    display: inline-block;
+    border: 1px solid #0000003d;
+    width: 16.448%;
+  }
+
+  .table-data-search table table tr .append-td:nth-child(odd){
+    background-color: #5d5e6117;
+  }
+
+  .table-data-search table table tr .append-td:nth-child(even){
+    background-color: #ffffffa6;
+  }
+
+  .action-button button{
+  
+    padding: 7px 18px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-family: arial;
+  }
+  
+  .action-button .show-all{
+    margin: 25px 25px 25px 0px;
+  }
+
+  .group-gap .search-icon{
+    padding: 0px 10px 0px 40px;
+    position: relative;
+    background: url('../../../assets/icon/search.png');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    margin-left: 63%;
+    width: 23%;
+    background-position: left;
+  }

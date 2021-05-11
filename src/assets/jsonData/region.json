@@ -1,0 +1,40 @@
+{
+"region": [
+    {
+        "id": "1",
+        "value": "Central"
+    },
+    {
+        "id": "1",
+        "value": "Western"
+    },
+    {
+        "id": "1",
+        "value": "Eastern"
+    },
+ {
+        "id": "2",
+        "value": "Eastern 1"
+    },
+ {
+        "id": "2",
+        "value": "Eastern 2"
+    },
+ {
+        "id": "2",
+        "value": "Eastern 3"
+    },
+{
+        "id": "3",
+        "value": "Western 1"
+    },
+{
+        "id": "3",
+        "value": "Western 2"
+    },
+{
+        "id": "3",
+        "value": "Western 3"
+    }
+ ]
+}

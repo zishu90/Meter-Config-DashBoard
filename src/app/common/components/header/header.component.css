@@ -1,0 +1,47 @@
+.main-header{
+    background-color: #fff;
+    width: 96%;
+    float: left;
+    padding: 0% 2%;
+}
+.main-header .smp-logo{ 
+  margin: 10px 00px;
+  float: left;
+}
+
+.main-header p{
+    border-right: 1.5px solid #20468F;
+    height: 40px;
+    top: 17px;
+    left: 240px;
+    position: absolute;
+}
+
+.main-header h2{
+    text-transform: uppercase;
+    color: #0d0d8dc4;
+width: 65%;
+    font-size: 28px;
+    float: left;
+    margin: 35px 15px 37px 48px;
+    font-weight: 100;
+}
+
+.main-header .sec-logo{
+    float: right;
+    margin: 26px 0px;
+}
+
+.main-header span{
+    color: #808080eb;
+    margin:38px 0px 30px 19px;
+    float: left;
+    border-right: 0.5px solid #808080eb;
+    padding-right: 38px;
+    font-size: 14px;
+}
+
+.main-header span div{
+    float: right;
+    margin-top: 3px;
+}

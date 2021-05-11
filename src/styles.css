@@ -1,0 +1,234 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background-color: #8080802e; }
+
+.f-left{
+    float: left;
+}
+.f-right{
+    float:right;
+}
+.sub-header{
+    width: 95%;
+    float: left;
+    /* padding: 0% 2%; */
+    border-bottom: thin solid #80808040;
+    margin: 0% 2.5%;
+}
+
+.main-content{
+    width: 96%;
+    float: left;
+    padding: 1% 2%;
+}
+.mat-dialog-container{
+    padding: 0px 0px!important;
+    overflow: unset!important;
+    width: 1050px!important;
+}
+
+.edit-field span{
+   color:  #847FF7;
+}
+/* common css style for shared components */
+
+.inner-sub-header{
+    background-color: #80808036;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 600;
+    color: #0000008c;
+    padding: 10px 0px 10px 32px;
+    margin: 0px;
+    width: 96.4%;
+    float: left;
+}
+.inner-sub-header-data{
+    height: 20px;
+    background-color: #80808036;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 600;
+    color: #0000008c;
+    padding: 10px 0px 10px 32px;
+    margin: 0px;
+    /* width: 100%; */
+    /* float: left; */
+}
+.items{    
+    width: 100%;
+    float: left;
+    border: 1px solid #80808030;
+}
+.items span{
+    /* padding: 15px 0px 15px 85px;
+    float: left;
+    width: 34%;
+    font-size: 16px; */
+    padding: 15px 0px 15px 85px;
+    float: left;
+    width: 49.5%;
+    font-size: 16px;
+    border-right: 1px solid #808080b8;
+
+}
+
+.items p:nth-child(odd){
+    /* float: left;
+    padding: 15px 0px 15px 0px;
+    margin: 0px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500; */
+    float: left;
+    padding: 15px 5px 15px 5px;
+    margin: 0px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 100;
+    border-right: 1px solid #808080b8;
+    width: 15.4%;
+    text-align: center;
+    height: 20px;
+}
+.items p:nth-child(even){
+  
+    float: left;
+    padding: 15px 5px 15px 5px;
+    margin: 0px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 100;
+    border-right: 1px solid #808080b8;
+    width: 22.5%;
+    text-align: center;
+}
+.input-items #p1{
+    padding: 28px 0px 25px 85px;
+    float: left;
+    width: 34%;
+    font-size: 18px;
+    color: #0072ff;
+}
+
+.input-items .p2{
+    padding: 28px 100px 28px 0px!important;
+}
+
+.input-items #p3{
+    padding: 28px 0px 28px 0px!important;
+    width: 16%;
+    font-weight: 100;
+}
+
+.input-items input {
+    margin: 15px 20px 15px 0px;
+    height: 40px;
+    width: 5%;
+    padding: 0px 10px;
+    float: left;
+}
+
+.input-items #p4{
+    padding: 28px 115px 28px 28px!important;
+    font-weight: 400;
+    color: #808080ad;
+    font-size: 19px;
+}
+.input-items button{
+    padding: 12px 40px;
+    margin: 17px 0px 17px 0px;
+    color: white;
+    background-color: #fb8c19d9;
+    border: none;
+    font-size: 16px;
+}
+
+
+/* Meter deatils configuration page css stsrt here */
+
+.table-data .append-td tr td{
+    padding: 10px 20px;
+    border-bottom: 0.5px solid #808080b8;
+    height: 29.9px;
+    border-right: 0.5px solid #808080b8;
+    font-size: 17px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.edit-data{
+    float: left;
+    width: 10%;
+}
+.edit-data .table-items{
+    display: grid;
+}
+
+.edit-data .table-items tr td{
+    height: 51px;
+    /* border-bottom: 0.5px solid #808080b8; */
+    padding: 0px 20px 0px 20px;
+    /* border-left: 0.5px solid #808080b8; */
+}
+
+.edit-data .table-items tr button{
+    padding: 5px 30px;
+    background-color: orange;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    margin: 10px 20px 12px 35px;
+    font-size: 18px;
+}
+
+.table-items table{
+    display: inline;
+}
+
+.table-items td.append-td {
+    display: block;
+}
+
+.table-items table th{
+    background-color: #80808036;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 600;
+    color: #0000008c;
+    padding: 10px 5px 10px 5px;
+    border-right: 0.5px solid #808080b8;
+    border-left: 0.5px solid #808080b8;
+}
+
+.table-items table .inner-sub-header-blank{
+    background-color: #80808036;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 600;
+    color: #0000008c;
+    padding: 20px 5px 20px 5px;
+    border-right: none;
+    border-left: none;
+}
+.edit-data .table-items table{
+    border-bottom: thin solid #8080806b;
+    border-left: thin solid #8080806b;
+}
+
+
+/* Close here */
+.table-data{
+    float: left;
+    max-width: 43%;
+    overflow-x: scroll; 
+    white-space: nowrap;
+}
+
+.label-main{
+ width: 47%;
+ float: left;
+}

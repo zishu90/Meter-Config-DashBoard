@@ -1,0 +1,246 @@
+<div class="sub-header">
+    <h2>meter configuration</h2>
+    <p class="para">Please select the search criteria from below to see the result</p>
+</div>
+
+<div class="main-content">
+    <div class="search-box">
+        <h2>Search</h2>
+        <form [formGroup]="searchMeterForm"  (ngSubmit)="onSubmit()">
+            <div class="group-gap">
+                <div class="mb mr-22">
+                    <select class="custom-select required-field"  (change)="changeType($event)" formControlName="Vendor"  >
+                        <option value="" >Select Vendor  <span style="color: green">*</span> </option>
+                        <!-- <option [selected]="true" [ngValue]="vendordata[0].VENDOR" >{{vendordata[0].VENDOR}}</option> -->
+                        <option *ngFor="let data of vendordata let i = index" [ngValue]="data.VENDOR" >{{data.VENDOR}}</option>
+
+                    </select>
+                    <!-- <div class="invalid-feedback" *ngIf="isSubmitted && Vendor.errors?.required">
+                        Please enter vendor<sup>*</sup>
+                    </div> -->
+         
+                    <!-- <mat-form-field>
+                        <mat-select placeholder="Select Vendor" name="select"  required  formControlName="Vendor"> 
+                          <mat-option *ngFor="let data of vendordata" [value]="data.VENDOR" >
+                            {{ data.VENDOR }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field> -->
+                </div>
+                <div class="mb mr-22">
+                    <select class="custom-select" (change)="changeType($event)" formControlName="Region" >
+                        <option value="">Select Region  <span style="color: green">*</span></option>
+                      
+                        <option *ngFor="let data of regiondata let i = index" [ngValue]="data.REGION_NAME" 
+                        >{{data.REGION_NAME}}</option>
+
+                    </select>
+                    <!-- <div class="invalid-feedback" *ngIf="isSubmitted && Region.errors?.required">
+                        Please enter region<sup>*</sup>
+                    </div> -->
+                    <!-- <mat-form-field>
+                        <mat-select placeholder="Select Region" name="select"  required  formControlName="Region"> 
+                          <mat-option *ngFor="let data of regiondata" [value]="data.REGION_NAME" >
+                            {{ data.REGION_NAME }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field> -->
+                   
+                </div>
+               
+                <div class="mb mr-22">
+                    <select class="custom-select" (change)="changeType($event)" formControlName="Department" >
+                        <option value="">Select Department  <span>*</span></option>
+                        <option *ngFor="let data of deparmentdata let i = index" [ngValue]="data.DEPARTMENT_NAME" 
+                        >{{data.DEPARTMENT_NAME}}</option>
+
+                    </select>
+                    <!-- <div class="invalid-feedback" *ngIf="isSubmitted && Department.errors?.required">
+                        Please enter department<sup>*</sup>
+                    </div> -->
+                    <!-- <mat-form-field>
+                        <mat-select placeholder="Select Region" name="select"  required  formControlName="Region"> 
+                          <mat-option *ngFor="let data of regiondata" [value]="data.REGION_NAME" >
+                            {{ data.REGION_NAME }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field> -->
+                   
+                </div>
+                <div class="mb mr-22">
+                    <select class="custom-select" (change)="changeType($event)" formControlName="Office" >
+                        <option value="">Select Office  <span>*</span></option>
+                        <option *ngFor="let data of officedata let i = index"  [ngValue]="data.OFFICE_NAME" 
+                        >{{data.OFFICE_NAME}}</option>
+                    </select> 
+                    <!-- <div class="invalid-feedback" *ngIf="isSubmitted && Office.errors?.required">
+                        Please enter office<sup>*</sup>
+                    </div> -->
+                     <!-- <mat-form-field>
+                        <mat-select placeholder="Select Office" name="select"  required  formControlName="Office"> 
+                          <mat-option *ngFor="let data of officedata" [value]="data.OFFICE_NAME" >
+                            {{ data.OFFICE_NAME }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field> -->
+                </div> 
+              
+                <div class="mb mr-22" style="position: relative;">
+                    <select class="custom-select" (change)="changeType($event)" formControlName="typeofMeter" >
+                        <option value="">Select Meter Type <span>*</span></option>
+                        <option *ngFor="let data of meterTypedata let i = index" [ngValue]="data.METER_TYPE" 
+                        >{{data.METER_TYPE}}</option>
+                    </select>
+                      <!-- <mat-form-field>
+                        <mat-select placeholder="Select Meter Type" name="select"  required  formControlName="typeofMeter"> 
+                          <mat-option *ngFor="let data of TypeValue" [value]="typeval" >
+                            {{ typeval }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field> -->
+                    <!-- <div class="invalid-feedback" *ngIf="isSubmitted && typeofMeter.errors?.required">
+                        Please enter meter type<sup>*</sup> 
+                    </div> -->
+                </div>
+                <div class="mb ">
+                    <select class="custom-select"  (change)="changeType($event)" formControlName="MFG" >
+                        <option value="">Select Manufacturer <span>*</span></option>
+                        <option *ngFor="let data of manufacturedata let i = index" [ngValue]="data.MANUFACTURER" 
+                        >{{data.MANUFACTURER}}</option>
+                    </select>
+                    <!-- <div class="invalid-feedback" *ngIf="isSubmitted && MFG.errors?.required">
+                        Please enter manufacturer<sup>*</sup>
+                    </div> -->
+                   
+                </div>
+               
+            </div>
+            <!-- <div class="search-manual"><p>Or Search manualy by </p></div> -->
+            <div class="group-gap " style="margin: 30px 0px 30px 0px;">
+                <input type="text" name="Cell ID" class="mr-22 search-icon" placeholder="OR Search by Cell Site ID, DCU ID or by Meter Id"  (keyup)="inputChanged($event)" formControlName="cellDCUMeterID">
+                <button type="submit"  [disabled]="searchMeterForm.invalid" class="btn btn-danger btn-lg btn-block" >Search</button>
+            </div>
+            <!-- Submit Button -->
+        </form>
+    </div>
+
+    <!-- Meter lis DIsplay here -->
+    <div class="meter-list-main">
+        <div class="searchResult"><h2>Search Result</h2> <span>(Found {{numberMeter}} Meters)</span></div>
+        <p>Click on any Meter Number to see the Meter configuration</p>
+        <!-- <h2 class="header-cell">Meter Numbers</h2> -->
+        <form [formGroup]="meterform">
+          <div class="table-data-search">
+            <table >
+                <table>
+                    <thead>Meter Numbers</thead>
+                    <thead>Meter Numbers</thead>
+                    <thead>Meter Numbers</thead>
+                    <thead>Meter Numbers</thead>
+                    <thead>Meter Numbers</thead>
+                    <thead>Meter Numbers</thead>
+
+                    <tr>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005051"><td>SXE2020807005051</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005052"><td>SXE2020807005052</td></tr>
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005053"><td>SXE2020807005053</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005054"><td>SXE2020807005054</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr> <input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005055"><td>SXE2020807005055</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr> <input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005056"><td>SXE2020807005056</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005057"><td>SXE2020807005057</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005058"><td>SXE2020807005058</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005059"><td>SXE2020807005059</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005061"><td>SXE2020807005061</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005062"><td>SXE2020807005062</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005063"><td>SXE2020807005063</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005064"><td>SXE2020807005064</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005065"><td>SXE2020807005065</td></tr>
+
+                            </table>
+                        </td>
+                        <td class="append-td">
+                            <table>
+                                
+                             <tr><input type="checkbox" (change)="eventCheck($event)" value="SXE2020807005067"><td>SXE2020807005067</td></tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table> 
+             </table>
+          </div>
+          <div class="action-button">
+            <button class="show-all"  type="submit" [disabled]="!meterform.valid" (click)="editConfig();">Edit Configuration </button>
+            <button class="bulk-action" type="submit" [disabled]="!meterform.valid" [routerLink] = "'/meter-details'">Show All Configuration </button>
+          </div>
+        </form>
+    </div>
+    
+</div>
+    
